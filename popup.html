@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="popup.css">
+    <title>Nocturne Dev</title>
+  </head>
+  <body>
+    <main>
+      <header><span class="moon">◐</span><div><h1>Nocturne Dev</h1><p id="domain">This page</p></div></header>
+      <label class="switch-row"><span>Enable everywhere</span><input id="enabled" type="checkbox"><i></i></label>
+      <label class="switch-row domain-toggle"><span id="domain-label">Enable on this site</span><input id="site-enabled" type="checkbox"><i></i></label>
+      <section aria-label="Appearance controls">
+        <label>Brightness <output id="brightness-output"></output><input id="brightness" type="range" min="50" max="150" value="100"></label>
+        <label>Contrast <output id="contrast-output"></output><input id="contrast" type="range" min="50" max="150" value="100"></label>
+        <label>Saturation <output id="saturation-output"></output><input id="saturation" type="range" min="0" max="200" value="100"></label>
+        <label>Warmth <output id="blueLight-output"></output><input id="blueLight" type="range" min="0" max="100" value="0"></label>
+      </section>
+      <button id="reset" type="button">Reset appearance</button>
+      <p class="note">Settings may sync through Chrome. Internal pages cannot be styled.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

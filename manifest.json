@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Nocturne Dev",
+  "version": "0.1.0",
+  "description": "A local, configurable dark-mode helper for development websites.",
+  "permissions": ["storage", "tabs", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["preload.js"],
+    "run_at": "document_start",
+    "all_frames": true
+  }],
+  "action": {
+    "default_title": "Nocturne Dev",
+    "default_popup": "popup.html"
+  }
+}
