@@ -1,8 +1,10 @@
-# Nocturne Dev
+# Nocturne Chrome Darkmode Extension
 
 A local Manifest V3 Chrome extension that applies a configurable dark appearance to HTTP(S) websites.
 
-![Illustrative before-and-after preview of Nocturne Dev](assets/preview.png)
+This is a small, vibe-coded project built with a coding assistant for my own use. I wanted something lightweight for the handful of websites I visit, especially news sites that don't offer a dark mode. It grows through trying it on those pages, fixing what doesn't work, and checking the results. It is not intended to handle every website perfectly.
+
+![Illustrative before-and-after preview of Nocturne Chrome Darkmode Extension](assets/preview.png)
 
 *Illustrative mock-up; results vary by website.*
 
@@ -11,7 +13,7 @@ A local Manifest V3 Chrome extension that applies a configurable dark appearance
 1. Open `chrome://extensions`.
 2. Enable **Developer mode**.
 3. Choose **Load unpacked**.
-4. Select this `nocturne-dev` folder.
+4. Select the folder containing `manifest.json`.
 
 The extension has no account, telemetry, payment, or extension-operated remote service. It cannot run on Chrome's own internal pages, the Web Store, or other protected pages.
 
@@ -36,7 +38,7 @@ Appearance preferences, the global switch, and the hostnames you explicitly enab
 
 ## Colour decision rules
 
-Nocturne Dev uses the browser's computed CSS values rather than a list of website-specific selectors. Its rules are intentionally conservative:
+The extension uses the browser's computed CSS values rather than a list of website-specific selectors. Its rules are intentionally conservative:
 
 1. **Classify the paint.** Solid colours, gradients and `::before`/`::after` UI surfaces are candidates, including those in open Web Component Shadow DOMs. Image URLs, media elements, canvases and iframes are never colour-filtered. Translucent gradient overlays associated with media are preserved, so they cannot become opaque covers over thumbnails.
 2. **Transform surfaces by luminance.** Only light surfaces are mapped to the dark palette. A surface that was already dark stays dark, preventing black text from being introduced on existing dark cards.
@@ -51,7 +53,7 @@ Computed colour snapshots are held in memory for the current document only and a
 
 ## Improving support for a website
 
-Nocturne Dev is a small, deliberately low-key project. Websites use many different CSS patterns, so some will need further work. The extension does not learn new rules automatically: it improves when contributors investigate issues, update the code, and check the results.
+This is a small, deliberately low-key project. Websites use many different CSS patterns, so some will need further work. The extension does not learn new rules automatically: it improves when contributors investigate issues, update the code, and check the results.
 
 When a page does not look or behave as expected:
 

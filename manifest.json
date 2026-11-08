@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Nocturne Dev",
+  "name": "Nocturne Chrome Darkmode Extension",
   "version": "0.1.0",
   "description": "A local, configurable dark-mode helper for development websites.",
   "permissions": ["storage", "tabs", "scripting"],
@@ -13,7 +13,7 @@
     "all_frames": true
   }],
   "action": {
-    "default_title": "Nocturne Dev",
+    "default_title": "Nocturne Chrome Darkmode Extension",
     "default_popup": "popup.html"
   }
 }
